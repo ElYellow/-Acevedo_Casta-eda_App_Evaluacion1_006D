@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar
+  class="ion-padding">
+  <ion-buttons slot="start">
+  <ion-back-button 
+        defaultHref="/"
+        text="Back"
+        color="success"
+        mode="ios">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-avatar>
+         <ion-img src="/assets/windows.png"></ion-img>
+      </ion-avatar>
+    </ion-buttons>
+  <ion-title class="titulo"> Activar Windows 10 </ion-title>
+</ion-toolbar>
+</ion-header>
+  <ion-content>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle class="subtitulo1"> Formatear Windows 10 💻🔥</ion-card-subtitle>
+        <ion-card-title class="titulo1"> Cómo activar Windows 10 en tu Computador </ion-card-title>
+      </ion-card-header>
+  
+      <ion-card-content  class="ion-padding contenido">
+        <p>Tras instalar Windows 10, podrás usar el sistema operativo libremente durante un tiempo. Sin embargo, transcurrido el periodo de prueba, deberás activar Windows 10 para poder usarlo con normalidad. Como decía, puedes descargar Windows 10 gratis e instalarlo en tu computadora, pero, tarde o temprano, tendrás que activarlo.</p>
+      <br>
+        <ion-img src="assets/Windows10Activacion.jpg"></ion-img>
+      </ion-card-content>
+      
+      <ion-card-content  class="ion-padding contenido">  
+      <p>Windows está lleno de comandos y trucos que tal vez no conocemos en su totalidad, aquí te vamos a mostrar algunos muy útiles.</p>
+      </ion-card-content>
+
+      <ion-card-content  class="ion-padding contenido">      
+      <p>Activar la licencia de Windows usando la línea de comandos CMD es sumamente sencillo</p>
+      <p>El primer paso será abrir la consola de comandos CMD, para hacerlo hay que abrir el buscador de Windows y escribir la palabra CMD.</p>
+      </ion-card-content>
+
+      <ion-card-content  class="ion-padding contenido"> 
+      <p>Una vez abierto el programa, accede con permisos de administrador dando clic con el botón derecho del mouse y eligiendo la opción correspondiente.</p>
+          <p>A continuación debes teclear estos comandos:</p>
+          <p>slmgr /ipk XXXX-XXXX-XXXX-XXXX-XXXX (aquí va la clave del producto)</p>
+          <ion-card>
+            <ion-item href="/claves" target="">
+              <ion-icon name="key-outline" slot="start"></ion-icon>
+              <ion-label> Claves del Producto </ion-label>
+            </ion-item>
+          </ion-card>
+      </ion-card-content>
+
+      <ion-card-content  class="ion-padding contenido"> 
+          <p>slmgr /skms kms.digiboy.ir </p>
+          <p>Otra opción en caso de que este comando falle es escribir kms.msguides.com</p>
+          <p>slmgr /ato</p>
+          <br>
+          <ion-img src="assets/WindowsCMD.png"></ion-img>
+          <br>
+          <p>Una vez que hayas escrito los comandos, verás que se van a abrir tres ventanas distintas en las que podrás ver el progreso de la activación.</p>
+          <p>Cuando el proceso esté completado, cierra la ventana de Windows y automáticamente quedará activado. Para comprobar que todo se realizó correctamente, puedes verificar desde el panel de control o abriendo nuevamente la consola.</p>
+          <br>
+          <ion-img src="assets/Windows10Activado.jpg"></ion-img>
+    </ion-card-content>
+    </ion-card>
+</ion-content>

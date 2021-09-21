@@ -1,0 +1,73 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar
+  class="ion-padding">
+
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()"
+      color="success">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    
+    <ion-buttons slot="end">
+      <ion-avatar>
+         <ion-img src="/assets/DHC.png"></ion-img>
+      </ion-avatar>
+    </ion-buttons>
+
+
+    <ion-title class="titulo">DHComputers</ion-title>
+  </ion-toolbar>
+</ion-header>
+   
+    <ion-list>
+      <ion-item *ngFor="let c of componentes"
+          [routerLink] = "c.redirecTo"
+          detail="true"> 
+          <ion-icon [name]="c.icon"
+            slot="start"
+            color="success"></ion-icon> 
+            {{c.name}}
+      </ion-item>
+         
+   </ion-list>
+
+   <ion-content class="ion-padding contenido">
+    <ion-card-header>
+      
+      <ion-card-title class="titulo"> Bienvenido </ion-card-title>
+
+      <p>DHComputers es una empresa que tiene como origen la antigua DCH, después de la salida de uno de sus dueños en 2021, lo cual pedía a gritos una renovación, Diego y Héctor decidieron cambiar el rumbo de la empresa relacionándola con el servicio hacia la comunidad aficionada a la computación,
+       esto se ve reflejado en que ya no son una empresa de venta de componentes, si no mas bien una dedicada a la enseñanza e información hacia el público.</p>
+
+    </ion-card-header>
+
+    <ion-card-title class="titulo"> Top Guias </ion-card-title>
+    <ion-card>
+      <ion-img src="assets/Windows10Activacion.jpg" ></ion-img>
+      <ion-button color="success" expand="block" fill="clear" shape="round" href="/activarwindows">
+        <ion-icon name="key-outline" slot="start"></ion-icon>
+        Activar Windows 10
+      </ion-button>
+    </ion-card>
+    <ion-card>
+      <ion-img src="assets/InstalarWindows10.jpg"></ion-img>
+      <ion-button color="success" expand="block" fill="clear" shape="round" href="/windows">
+        <ion-icon name="logo-windows" slot="start"></ion-icon>
+        Instalar Windows 10
+      </ion-button>
+    </ion-card>
+    <ion-card>
+      <ion-img src="assets/3.jpeg"></ion-img>
+      <ion-button color="success" expand="block" fill="clear" shape="round" href="/limpiarpc">
+        <ion-icon name="glasses-outline" slot="start"></ion-icon>
+        Limpiar PC
+      </ion-button>
+    </ion-card>
+    
+  </ion-content>
+
+
+
+    
+ 

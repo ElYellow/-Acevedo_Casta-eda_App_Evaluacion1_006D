@@ -1,0 +1,89 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar
+  class="ion-padding">
+    <ion-buttons slot="start">
+    <ion-back-button 
+          defaultHref="/"
+          text="Back"
+          color="success"
+          mode="ios">
+        </ion-back-button>
+      </ion-buttons>
+
+    
+    <ion-title class="titulo"> Iniciar Sesión </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+
+<ion-content>
+  <form #formulario="ngForm" (ngSubmit) ="onSubmit()">
+
+
+    <ion-item class="email">
+        <ion-icon color="success" name="mail-outline"></ion-icon>
+        <ion-label></ion-label>
+        <ion-input type="email" placeholder="Email"
+                  name="email" [(ngModel)]= "usuario.email"
+                  pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+                  required>
+        </ion-input>
+
+    </ion-item>
+
+    <ion-item class="password">
+        <ion-icon color="success" name="lock-closed-outline"></ion-icon>
+        <ion-label></ion-label>
+        <ion-input type="password" placeholder="Contraseña"
+                  name="password" [(ngModel)]= "usuario.password"
+                  required>
+        </ion-input>
+
+    </ion-item>
+
+    <div class="password-recuperar">
+      <ion-button color="success" fill="clear" class="ion-no-padding">
+        Has olvidado tu contraseña?
+      </ion-button>
+
+    </div>
+
+      <div class="crear-usuario">
+        <ion-button color="success" fill="clear" class="ion-no-padding">
+          Crear Usuario
+        </ion-button>
+
+    </div>
+
+    <div class="sign-btn-wrap">
+        <ion-button color="success" class="sign-btn" shape="round" fill="solid" [disabled] ="formulario.invalid"
+                  type="submit"  routerLink="/inicio">
+            Aceptar
+        </ion-button>
+    </div>
+
+    <div class="text-tag">
+      <ion-label color="success"> Iniciar Sesión </ion-label> 
+    </div>
+
+
+    <div class="social-btns">
+      <ion-button fill="clear" class="facebookbtn ion-no-padding">
+      <ion-img src="assets/social/facebook.png"></ion-img>
+      </ion-button>
+      <ion-button fill="clear" class="googlebtn ion-no-padding">
+      <ion-img src="assets/social/google.png"></ion-img>
+      </ion-button>
+      <ion-button fill="clear" class="applebtn ion-no-padding">
+      <ion-img src="assets/social/apple.png"></ion-img>
+      </ion-button>
+    </div>
+
+
+
+  </form>
+</ion-content>
+
+
